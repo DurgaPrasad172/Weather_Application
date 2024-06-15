@@ -1,0 +1,135 @@
+
+.weather-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: rgba(35, 193, 237, 0.8); 
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .weather-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .weather-card h2 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #f8f2f2;
+  }
+  
+  .weather-card p {
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: 200;
+  }
+  
+  .weather-card img.weather-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .weather-card .weather-details {
+    text-align: center;
+  }
+  
+  .weather-card .weather-details .icon {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+  
+  .weather-card.light-mode {
+    background-color: #1cd6e3; 
+  }  
+  .weather-card.sunny.light-mode {
+    background-color: #ffecb3; 
+  }
+  
+  .weather-card.cloudy.light-mode {
+    background-color: #e0e0e0; 
+  }
+  
+  .weather-card.rainy.light-mode {
+    background-color: #b3e5fc; 
+  }
+  
+  .weather-card.snowy.light-mode {
+    background-color: #e1f5fe; 
+  }
+  
+  .weather-card .weather-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 0.1;
+    z-index: -1;
+  }
+  
+
+  .dark-mode .weather-card {
+    background-color: #66bb6a;
+    color: rgb(5, 5, 5);
+    border: 1px solid #555;
+  }
+  
+  .dark-mode .weather-card .location {
+    color: #050505;
+  }
+  
+  .dark-mode .weather-card .weather-details .icon {
+    color: #3bc1e2;
+  }
+  
+  .remove-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-button:hover {
+    background-color: #cc0000;
+  }
+  
+  @media (max-width: 600px) {
+    .weather-card {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .weather-card h2 {
+      font-size: 20px;
+    }
+  
+    .weather-card p {
+      font-size: 14px;
+    }
+  
+    .weather-card img.weather-icon {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
