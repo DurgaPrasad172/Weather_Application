@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Weather Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Weather Application is a user-friendly, visually appealing, and functional application that provides users with current weather information based on their input. It allows users to search for weather data by city name or zip code, displays weather information for multiple locations simultaneously, and offers a dark mode and light mode toggle for enhanced user experience.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Fetch and display current weather information based on user input.
+- Display basic weather details including location, temperature, date, and time.
+- Implement a search option for users to fetch weather data for other cities.
+- Allow users to add multiple locations and display weather info for each simultaneously.
+- Dark mode and light mode toggle functionality.
+- Responsive design that works well on various devices (desktop, tablet, mobile).
+- Interactive background images and colors.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React.js: JavaScript library for building user interfaces.
+- Axios: Promise-based HTTP client for making API requests.
+- OpenWeatherMap API: API for fetching weather data.
+- CSS: Styling for the application.
+- Unsplash: Source for background images.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup and Run Instructions
 
-### `npm test`
+1. **Clone the Repository**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    git clone https://github.com/your-username/weather-app.git
+    cd weather-app
+    ```
 
-### `npm run build`
+2. **Install Dependencies**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Make sure you have [Node.js](https://nodejs.org/) installed. Then, run:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Create a `.env` File**
 
-### `npm run eject`
+    Create a `.env` file in the root directory of the project and add your OpenWeatherMap API key:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```
+    REACT_APP_OPENWEATHERMAP_API_KEY=your_api_key_here
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Run the Application**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    npm start
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    The application will open in your default web browser at `http://localhost:3000`.
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `src/`
+  - `api/`
+    - `index.js`: Contains the API call to OpenWeatherMap.
+  - `components/`
+    - `WeatherCard.js`: Component for displaying weather information.
+    - `SearchBar.js`: Component for the search input and button.
+    - `ToggleSwitch.js`: Component for the dark mode/light mode toggle switch.
+  - `App.js`: Main component that manages the state and renders child components.
+  - `App.css`: Global styles for the application.
+  - `WeatherCard.css`: Styles specific to the `WeatherCard` component.
+  - `SearchBar.css`: Styles specific to the `SearchBar` component.
+  - `ToggleSwitch.css`: Styles specific to the `ToggleSwitch` component.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Known Limitations or Issues
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **API Rate Limiting**: The OpenWeatherMap API may limit the number of requests per minute. Ensure that your usage stays within the free tier limits or consider upgrading your API plan if necessary.
+- **Error Handling**: While the application handles common errors (e.g., invalid location, network issues), there may be edge cases that are not covered.
+- **UI/UX**: Further improvements can be made to the user interface and experience based on user feedback.
