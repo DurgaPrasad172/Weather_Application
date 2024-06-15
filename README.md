@@ -25,7 +25,7 @@ This Weather Application is a user-friendly, visually appealing, and functional 
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/your-username/weather-app.git
+    git clone https://github.com/DurgaPrasad172/Weather_Application.git
     cd weather-app
     ```
 
